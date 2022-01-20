@@ -32,7 +32,7 @@ public static class Data
 
     public static readonly Dictionary<char, Orphan> orphans = new Dictionary<char, Orphan>
     {
-        { 'A', new Orphan("Annie", new[] { new Swap(7, 16), new Swap(8, 15) }) },
+        { 'A', new Orphan("Annie", new[] { new Swap(7, 16), new Swap(8, 15), new Swap(11, 12) }) },
         { 'B', new Orphan("Bartholomew James Quimshire", new[] { new Swap(12, 23), new Swap(13, 22), new Swap(17, 18)}) },
         { 'C', new Orphan("Crusty McGoblin", new[] {new Swap(6, 18 ), new Swap(7, 17 ), new Swap(8, 16 ), new Swap(10, 14) }) },
         { 'D', new Orphan("Denzel", new[] { new Swap(0, 23), new Swap(3, 20) }) },

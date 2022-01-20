@@ -234,6 +234,7 @@ public class OffWhiteCipherScript : MonoBehaviour
     }
     IEnumerator PlaceEachTile()
     {
+        yield return new WaitForSeconds(1);
         Vector3[] positions = Enumerable.Range(0, 18).Select(
             index => new Vector3(
                 0.04f * (index % 3) - 0.0625f,
@@ -242,12 +243,12 @@ public class OffWhiteCipherScript : MonoBehaviour
         for (int i = 0; i < 18; i++)
         {
             StartCoroutine(PlaceTile(i, positions[i]));
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.075f);
         }
     }
     IEnumerator PlaceTile(int ix, Vector3 finalPosition)
     {
-        yield return MoveKeyToPosition(keys[mitosisingKeys[ix]].transform, finalPosition, 1.5f);
+        yield return MoveKeyToPosition(keys[mitosisingKeys[ix]].transform, finalPosition, 1f);
         placedKeys[ix] = true;
         yield return new WaitUntil(() => placedKeys.All(x => x));
         yield return Mitosis(keys[mitosisingKeys[ix]].transform, 2 * ix);

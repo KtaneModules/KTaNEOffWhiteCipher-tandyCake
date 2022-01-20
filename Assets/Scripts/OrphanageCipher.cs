@@ -32,19 +32,27 @@ public class OrphanageCipher : Cipher
             output += _EncryptLeapfrogPair(pairs[i].ToCharArray(), i);
         output = Enumerable.Range(0, 6).Select(ix => xIndices.Contains(ix) ? 'X' : output[ix]).Join("");
 
-        Log("Cipher output: {0} (note: during encryption, each pair needs to be reversed)", output);
+        Log("Cipher output: {0} (note: during encryption, each non-X pair needs to be reversed)", output);
         return output;
     }
     private string _EncryptLeapfrogPair(char[] pair, int ix)
     {
         Log("--------");
-        for (int i = 0; i < 2; i++)
-            if (pair[i] == 'X')
-            {
-                Log("Substituting X at index {0} with a Y. It will be changed back to an X after the cipher.", 2 * ix + i + 1);
-                pair[i] = 'Y';
-                xIndices.Add(2 * ix + i);
-            }
+        if (pair[0] == 'X' && pair[1] == 'X')
+        {
+            Log("What the fuck they're both x's??!?!?!?!?!?! Just don't change it man");
+            return "XX";
+        }
+        if (pair[0] == 'X')
+        {
+            Log("X detected in pair; jumping {0} over the center.", pair[1]);
+            return "X" + _JumpOver(pair[1], _orphanage[12]);
+        }
+        if (pair[1] == 'X')
+        {
+            Log("X detected in pair; jumping {0} over the center.", pair[0]);
+            return _JumpOver(pair[0], _orphanage[12]).ToString() + 'X';
+        }
         string output = "";
         output += _JumpOver(pair[1], pair[0]);
         output += _JumpOver(pair[0], output[0]);
