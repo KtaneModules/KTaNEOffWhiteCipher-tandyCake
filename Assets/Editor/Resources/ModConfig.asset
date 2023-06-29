@@ -13,17 +13,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: offWhiteCipher
   title: Off-White Cipher
-  author: Danny7007
+  author: tandyCake
   description: 'Faze Banks Supreme Off-White Hoodie NFT Selling for 50.23 Ethereum
 
 
-    Module by Danny7007
+    Module by tandyCake
 
     Manual by diffusegd and dicey_ow
 
     moduleID: offWhiteCipher
 
     Manual can be found at ktane.timwi.de'
-  version: 1.2.1
+  version: 1.2.2
   outputFolder: build
   previewImage: {fileID: 2800000, guid: c44c49aac15f84b4bbc67bc3607b2825, type: 3}

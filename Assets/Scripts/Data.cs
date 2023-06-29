@@ -38,7 +38,7 @@ public static class Data
         { 'D', new Orphan("Denzel", new[] { new Swap(0, 23), new Swap(3, 20) }) },
         { 'E', new Orphan("Evanie", new[] { new Swap(3, 13), new Swap(7, 9) }) },
         { 'F', new Orphan("Fletcher", new[] {new Swap(7, 19), new Swap(8, 18) }) },
-        { 'G', new Orphan("Gunther", new[] { new Swap(6, 19 ), new Swap(11, 14), new Swap(12, 13) }) },
+        { 'G', new Orphan("Glubtubbis Wepple", new[] { new Swap(6, 19 ), new Swap(11, 14), new Swap(12, 13) }) },
         { 'H', new Orphan("Hilbert", new[] { new Swap(5, 17), new Swap(10, 12), new Swap(7, 15) }) },
         { 'I', new Orphan("Isma", new[] { new Swap(3, 18), new Swap(8, 13) }) },
         { 'J', new Orphan("Jub-Jub", new[] { new Swap(1, 18), new Swap(2, 17), new Swap(3, 16) }) },
